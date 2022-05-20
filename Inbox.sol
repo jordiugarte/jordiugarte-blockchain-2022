@@ -1,17 +1,19 @@
-pragma solidity ^ 0.8.0;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.0;
 
 contract Inbox {
+
     string public message;
 
-    constructor(string initialMessage) {
-        message = initialMessage;
+    constructor() {
+        
     }
 
-    function getMessage() public view returns (string) {
+    function getMessage() public view returns (string memory) {
         return message;
     }
 
-    function setMessage(string newMessage) public {
+    function setMessage(string memory newMessage) public {
         message = newMessage;
     }
 }
