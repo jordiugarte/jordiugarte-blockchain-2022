@@ -8,3 +8,6 @@ address contract 2 : 0xF864dE7986F45351f55B7fa53177C57063Eb3B85
  function getMessage() public  returns(string memory) {
         return message;
     }
+
+BSC Contract:
+0xAaF62607dff7F0E3079a682Ff5d6174feB8FEa31
