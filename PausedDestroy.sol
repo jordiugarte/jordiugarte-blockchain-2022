@@ -14,6 +14,7 @@ contract PausedDestroy {
     }
 
     function setPaused(bool value) public {
+        require(owner == msg.sender, "No es el duenho");
         paused = value;
     }
 
@@ -24,8 +25,8 @@ contract PausedDestroy {
     }
 
     function destroyContract(address payable to) public {
-        //require(owner == msg.sender, "No es el duenho");
-        //require(!paused, "Contract is pasued");
+        require(owner == msg.sender, "No es el duenho");
+        require(!paused, "Contract is pasued");
         selfdestruct(to);
     }
 }
