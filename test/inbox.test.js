@@ -6,4 +6,11 @@ contract('Inbox', accounts => {
         const message = await instance.getMessage.call();
         assert.equal(message, 'Hi');
     })
+
+    it('setMessage', async () => {
+        const instance = await Inbox.deployed();
+        await instance.setMessage("Hi Ricardo", {from: accounts[0]});
+        const message = await instance.getMessage.call();
+        assert.equal(message, 'Hi Ricardo');
+    })
 })
