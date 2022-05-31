@@ -15,8 +15,13 @@ contract Inbox {
         return message;
     }
 
-    function setMessage(string memory newMessage) public {
-        require(msg.sender == ownerAdress, "Solo el owner puede modificar sus caracteristicas.");
+    function setMessage(string memory newMessage) public onlyOwner(msg.sender) {
+        require(msg.sender == ownerAdress, "Solo el owner puede modificar sus caracteristicas");
         message = newMessage;
+    }
+
+    modifier onlyOwner(address client) {
+        require(ownerAdress == client, "Solo el owner puede modificar sus caracterisitcas");
+        _;
     }
 }
