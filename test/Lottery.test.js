@@ -32,4 +32,13 @@ contract('Lottery', accounts => {
             assert.equal("Minimum 2.1 Ether", e.reason);
         }
     })
+
+    it("only manager can call pickWinner()", async () => {
+        try {
+            await instance.pickWinner({from: accounts[8]});
+            assert(true);
+        } catch(e) {
+            assert.equal("you are not the manager.", e.reason);
+        }
+    })
 })
