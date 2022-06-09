@@ -13,4 +13,13 @@ contract("Notes", accounts => {
         assert.equal(5, note);
     })
 
+    it("Only teacher", async () => {
+        try {
+            const id = web3.utils.keccak256("Paco Luis");
+            await instance.Evaluar(id, 70, {from: accounts[8]});
+            assert(false)
+        } catch (e) {
+            assert.equal("No tienes permisos para ejecutar esta funcion.", e.reason)
+        }
+    })
 })
