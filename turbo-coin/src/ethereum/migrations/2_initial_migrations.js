@@ -1,6 +1,6 @@
 const Migrations = artifacts.require("Migrations");
-const Inbox = artifacts.require('Inbox')
+const Inbox = artifacts.require('Lottery')
 
 module.exports = function (deployer) {
-  deployer.deploy(Inbox, 'Hi');
+  deployer.deploy(Lottery);
 };
