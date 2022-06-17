@@ -57,10 +57,10 @@ contract('TestBank', accounts => {
 
     it("The account name must have at least 6 chars", async()=>{
         try {
-            await instance.createAccount([1, "Mauricio", 200, true], {from: accounts[0]})
+            await instance.createAccount([1, "Cien", 200, true], {from: accounts[0]})
             assert(false);
         }catch (e) {
-            assert.equal("The name of product should be more than 5.",e.reason)
+            assert.equal("The name of product should be more than 5.", e.reason)
         }
     });
 
