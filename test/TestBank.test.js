@@ -71,6 +71,27 @@ contract('TestBank', accounts => {
         }catch (e) {
             assert.equal("You are not the owner.",e.reason)
         }
+    });
 
+    it("Realizar el testing los clientes pueden hacer el retiro de su dinero controlar si cuenta con el dinero que desea retirar en su cuenta bancaria", async()=>{
+        try {
+            await instance.createAccount([8,"543543",0,false],{from: accounts[0]});
+            await instance.depositMoney(8,{
+                from: accounts[8],
+                value: web3.utils.toWei("3", "ether"),});
+            //Redrawing money
+            await instance.redrawMoney(8,10);
+            assert(false);
+        }catch (e) {
+            assert.equal("You don't have enough money in your account to redraw.",e.reason)
+        }
+    });
+
+    it("Only the owner can retire funds", async()=>{
+        try {
+            await instance.withdrawAllMoney({from:accounts[9]});
+        }catch (e) {
+            assert.equal("You are not the owner.",e.reason)
+        }
     });
 })
