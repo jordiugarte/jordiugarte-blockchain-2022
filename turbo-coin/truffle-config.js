@@ -23,6 +23,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = "mail soup error gate elite destroy virus patch often flag sort verify"
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -46,12 +49,9 @@ module.exports = {
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    },
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io/v3/e63a8b56678d41b88cd21f484db2912c'),
-      network_id: "4",
-      gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
-      gasPrice: 20000000000  // 20 gwei (in wei) (default: 100 gwei)
+      provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/ebeb20c213ed459aa40a7c085204e95b'),
+      network_id: "4"
     },
     bscTestnet: {
       provider: () => new HDWalletProvider(mnemonic, 'https://data-seed-prebsc-1-s1.binance.org:8545'),
