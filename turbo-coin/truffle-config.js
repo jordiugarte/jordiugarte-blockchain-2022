@@ -51,7 +51,7 @@ module.exports = {
     },
     rinkeby: {
       provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/ebeb20c213ed459aa40a7c085204e95b'),
-      network_id: "4"
+      network_id: 4
     },
     bscTestnet: {
       provider: () => new HDWalletProvider(mnemonic, 'https://data-seed-prebsc-1-s1.binance.org:8545'),

@@ -27,7 +27,7 @@ function App() {
   const loadBlockchainData = async () => {
     //@ts-ignore  
     const Web3 = window.web3;
-    const networkData = contractLottery.networks['5777'];
+    const networkData = contractLottery.networks['4'];
     console.log('network data', networkData);
     if (networkData) {
       const abi = contractLottery.abi;
