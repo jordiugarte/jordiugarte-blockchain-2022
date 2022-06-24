@@ -26,6 +26,13 @@ module.exports = {
     goerly: {
       url: 'https://eth-goerli.alchemyapi.io/v2/1rNf7-DcgLFS7Kq0t9Rm0jKKzj-zQrox',
       accounts: ['727c2cc1656511945e04a5903a0338977bb1969192c3f6d8fa704eb8452fe390']
+    },
+    bscTestnet: {
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      chainId: 97,
+      accounts: {
+        mnemonic: ""
+      }
     }
   },
   paths: {
