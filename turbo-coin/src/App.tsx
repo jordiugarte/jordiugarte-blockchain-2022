@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {connectWallet, initialize} from './ethereum/web3';
-import contractLottery from './ethereum/abis/Lottery.json';
+import contractLottery from "./ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Lottery.sol/Lottery.json"
 
 function App() {
 
@@ -29,12 +29,14 @@ function App() {
     const Web3 = window.web3;
     const networkData = contractLottery.networks['4'];
     console.log('network data', networkData);
+    //const networkData = contractLottery.networks['4'];
+    //console.log('networkData:', networkData);
     if (networkData) {
       const abi = contractLottery.abi;
-      const address = networkData.address;
-      console.log('address: ', address);
-      
-      const contractDeployed = new Web3.eth.Contract(abi, address);
+      //const address = networkData.address;
+     //console.log('address: ', address);
+      //const contractDeployed = new Web3.eth.Contract(abi, address);
+      const contractDeployed = new Web3.eth.Contract(abi, '0x0dCab5Cd94621a1934d99258fc2a6543c204A032');
       setContract(contractDeployed);
 
       const players = await contractDeployed.methods.getPlayers().call();
