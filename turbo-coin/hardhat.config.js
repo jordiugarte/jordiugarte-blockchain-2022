@@ -24,17 +24,17 @@ module.exports = {
   networks: {
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/v3ogZZA201U2NdiP5HSVaJfdMagSB17a',
-      accounts: ['f8f10f8817befc7e27bc40da7cd559e25ad11c52dfe8451ceb7ea6311200bf10']
+      accounts: [privateKey]
     },
     goerly: {
       url: 'https://eth-goerli.alchemyapi.io/v2/1rNf7-DcgLFS7Kq0t9Rm0jKKzj-zQrox',
-      accounts: ['727c2cc1656511945e04a5903a0338977bb1969192c3f6d8fa704eb8452fe390']
+      accounts: [privateKey]
     },
     bscTestnet: {
       url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
       chainId: 97,
       accounts: {
-        mnemonic: ""
+        mnemonic: mnemonic
       }
     },
     bsc: {
