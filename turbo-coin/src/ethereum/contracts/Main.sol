@@ -14,7 +14,7 @@ contract Main {
         owner = msg.sender;
         contractAddress = address(this);
     }
-
+ 
     function priceTokens(uint256 numTokens) public returns(uint256) {
         return numTokens * 1 ether;
     }
