@@ -14,7 +14,6 @@ contract ERC20 is IERC20, IERC20Metadata {
     string private _name;
     string private _symbol;
 
-
     constructor(string memory name, string memory symbol) {
         _name = name;
         _symbol = symbol;
