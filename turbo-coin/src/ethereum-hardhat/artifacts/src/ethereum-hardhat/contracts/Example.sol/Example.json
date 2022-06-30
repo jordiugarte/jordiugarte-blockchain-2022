@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Example",
+  "sourceName": "src/ethereum-hardhat/contracts/Example.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212201ab54cad3e5b15fe2346a9a5710fa2ea904859663ed9d2ebfe2274dd81aabf3264736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212201ab54cad3e5b15fe2346a9a5710fa2ea904859663ed9d2ebfe2274dd81aabf3264736f6c63430008040033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
