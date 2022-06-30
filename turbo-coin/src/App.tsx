@@ -99,7 +99,7 @@ function App() {
   return (
       <div className="App" id="grad1">
         <h1>TURBO COIN</h1>
-        <Button onClick={() => connectWallet()} className="btn btn-info" variant='success'>Connect Metamask Wallet</Button>
+        <Button onClick={() => connectWallet()} className="btn btn-info" variant='success'>Conectar billetera Metamask</Button>
         <div className='container'>
             <p>Contract Address: {contractAddress}</p>
         </div>  
@@ -117,7 +117,7 @@ function App() {
                 <Form.Label>Valor</Form.Label>
                 <Form.Control id='quantityField' type="text" value={value} onChange={ (event) => { setValue(event.target.value) } } />
             </div>
-            <Button onClick={() => buy()} className="btn btn-info" variant='success'>Buy</Button>
+            <Button onClick={() => buy()} className="btn btn-info" variant='success'>Comprar</Button>
         </div>
 
         <div className='container'>
@@ -126,22 +126,22 @@ function App() {
         </div>
         
         <div className='container'>
-            <h2>Get User Balance</h2>
+            <h2>Balance de cuenta</h2>
             <Form.Label>Dirección de cuenta</Form.Label>
             <Form.Control id='addressField' type="text" value={addressBalance} onChange={ (event) => { setAddressBalance(event.target.value) } } />  
-            <button onClick={() => getUserBalance()} className="btn btn-info">User Balance</button>
+            <button onClick={() => getUserBalance()} className="btn btn-info">Obtener</button>
             <p>Balance: {userBalance}</p>
         </div>
 
         <div className='container'>
-            <h2>Create new Tokens</h2>
+            <h2>Crear nuevos tokens</h2>
             <Form.Control id='addressField' type="number" value={tokens} onChange={ (event) => { setTokens(event.target.value) } } />
-            <Button onClick={increment} className="btn btn-info" variant='success'>Create tokens</Button>
+            <Button onClick={increment} className="btn btn-info" variant='success'>Agregar</Button>
         </div>
         <div className='container'>
             <h2>Calcular precio de tokens</h2>
             <Form.Control id='addressField' type="number" value={quantity} onChange={ (event) => { setQuantity(event.target.value) } } />
-            <Button onClick={getTokenPrice} className="btn btn-info" variant='success'>Get price</Button>
+            <Button onClick={getTokenPrice} className="btn btn-info" variant='success'>Calcular</Button>
             <p>Precio: {tokenprice / 10**18} ETH</p>
         </div>
       </div>
